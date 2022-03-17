@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ad0e4b5002.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://img.icons8.com/color/344/tip.png"
+    />
+    <title>Tip calculator app</title>
+  </head>
+
+  <body>
+    <!-- Logo Section -->
+    <section class="logo">
+      <img src="/images/logo.svg" alt="" />
+    </section>
+    <main class="card">
+      <!-- Input Section -->
+      <section class="input-section">
+        <!-- Container Input Bill -->
+        <div class="bill-container">
+          <div class="label-wrapper">
+            <label for="input-bill">Bill</label>
+          </div>
+          <div class="input-wrapper">
+            <input
+              class="input-text"
+              type="text"
+              name="input-bill"
+              id="input-bill"
+              placeholder="0.0"
+            />
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
+        </div>
+        <!-- Container Select Tip % -->
+        <div class="select-tip-container">
+          <div class="label-wrapper">
+            <label for="input-tip">Select Tip %</label>
+          </div>
+          <div class="tip-wrapper">
+            <button class="btn">5%</button>
+            <button class="btn">10%</button>
+            <button class="btn">15%</button>
+            <button class="btn">25%</button>
+            <button class="btn">50%</button>
+            <input
+              class="input-text"
+              type="text"
+              name="input-tip"
+              id="input-tip"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+        <!-- Container Number of People -->
+        <div class="people-container">
+          <div class="label-wrapper">
+            <label for="input-people">Number of People</label>
+            <div class="error-msg">Can't be zero</div>
+          </div>
+          <div class="input-wrapper">
+            <input
+              class="input-text"
+              type="text"
+              name="input-people"
+              id="input-people"
+              placeholder="1"
+            />
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- Output Section -->
+      <section class="display-section">
+        <div class="elements-wrapper">
+          <div class="output-wrapper">
+            <div class="title-wrapper">
+              <div class="title">Tip Amount</div>
+              <div class="title-desc">/ person</div>
+            </div>
+            <div class="tip-value">$32.79</div>
+          </div>
+          <div class="output-wrapper">
+            <div class="title-wrapper">
+              <div class="title">Total</div>
+              <div class="title-desc">/ person</div>
+            </div>
+            <div class="total-value">$32.79</div>
+          </div>
+        </div>
+        <div class="button-section">
+          <button>RESET</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

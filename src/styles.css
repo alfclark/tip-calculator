@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --darkCyan: hsl(183, 100%, 15%);
+  --darkGrayCyan: hsl(186, 14%, 43%);
+  --grayCyan: hsl(184, 14%, 56%);
+  --lightGrayCyan: hsl(185, 41%, 84%);
+  --veryLightCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-color: var(--lightGrayCyan);
+}
+
+.logo {
+  margin: 4rem;
+}
+
+.card {
+  display: flex;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 60vh;
+}
+
+/*------------INPUT SECTION----------------------*/
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  height: 100%;
+}
+.label-wrapper {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+label {
+  color: var(--grayCyan);
+  font-weight: 700;
+}
+.error-msg {
+  color: indianred;
+  font-weight: 700;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.input-wrapper .fa-solid {
+  position: absolute;
+  left: 2rem;
+  color: var(--lightGrayCyan);
+}
+.input-text {
+  width: 100%;
+  border: none;
+  background-color: var(--veryLightCyan);
+  border-radius: 0.5rem;
+  color: var(--darkCyan);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: 700;
+  padding: 0.5rem 2.4rem;
+  font-family: "Space Mono";
+}
+.input-text::placeholder {
+  color: var(--lightGrayCyan);
+}
+.input-text:focus {
+  outline: none;
+  border: 2px solid var(--strongCyan);
+}
+.select-tip-container {
+  display: flex;
+  flex-direction: column;
+}
+.tip-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.tip-wrapper .input-text {
+  width: 30%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem;
+}
+.btn {
+  width: 30%;
+  border: none;
+  background-color: var(--darkCyan);
+  color: var(--white);
+  font-family: "Space Mono";
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
+  font-weight: 700;
+}
+.btn:hover {
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+  transition: 0.4s;
+}
+.btn-active {
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+}
+
+/*------------DISPLAY SECTION-------------*/
+.display-section {
+  background-color: var(--darkCyan);
+  border-radius: 1rem;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.elements-wrapper {
+  padding: 3rem;
+}
+.output-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.title-wrapper .title {
+  color: var(--white);
+  font-weight: 700;
+}
+.title-wrapper .title-desc {
+  color: var(--grayCyan);
+  font-weight: 700;
+}
+.tip-value,
+.total-value {
+  color: var(--strongCyan);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.button-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+.button-section button {
+  width: 100%;
+  border: none;
+  background-color: var(--strongCyan);
+  color: var(--darkCyan);
+  font-family: "Space Mono";
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    margin: 1rem;
+  }
+  .card {
+    width: 90vw;
+    height: 100%;
+  }
+  .input-section {
+    width: 100%;
+  }
+  .display-section {
+    width: 100%;
+  }
+}
