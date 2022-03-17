@@ -64,6 +64,7 @@ label {
 .error-msg {
   color: indianred;
   font-weight: 700;
+  opacity: 0;
 }
 .input-wrapper {
   display: flex;
@@ -166,6 +167,7 @@ label {
   color: var(--strongCyan);
   font-weight: 700;
   font-size: 2rem;
+  opacity: 0.2;
 }
 .button-section {
   display: flex;
@@ -185,6 +187,10 @@ label {
   border-radius: 0.5rem;
   padding: 0.6rem 0;
   font-weight: 700;
+}
+.button-section button:hover {
+  background-color: var(--darkGrayCyan);
+  transition: 0.4s;
 }
 
 @media only screen and (max-width: 500px) {
