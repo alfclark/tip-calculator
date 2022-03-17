@@ -13,7 +13,7 @@ tipButtons.forEach(function (val) {
   val.addEventListener("click", btnValue);
 });
 tipCustom.addEventListener("input", customTip);
-resetBtn.addEventListener("click", resetAll);
+//resetBtn.addEventListener("click", resetAll);
 
 let billValue = 0.0;
 let peopleValue = 1;
@@ -64,9 +64,20 @@ function calculateTip() {
   if (peopleValue >= 1) {
     let tipAmount = (billValue * tip) / peopleValue;
     let totalAmount = (tipAmount + billValue) / peopleValue;
-    tipValue.textContent = "$" + tipAmount;
+    tipValue.textContent = "$" + tipAmount.toFixed(2);
     tipValue.style.opacity = 1;
-    totalValue.textContent = "$" + totalAmount;
+    totalValue.textContent = "$" + totalAmount.toFixed(2);
     totalValue.style.opacity = 1;
   }
 }
+
+//function resetAll() {
+//  numPeople.value = "";
+//  billInput.value = "";
+//  tipValue.textContent = "$0.0";
+//  tipValue.style.opacity = 0.5;
+//  totalValue.textContent = "$0.0";
+//  totalValue.style.opacity = 0.5;
+//  getBill();
+//  addPeople();
+//}
